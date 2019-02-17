@@ -13,13 +13,16 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
+gem 'typhoeus'
+gem 'faraday'
+gem 'faraday_middleware'
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
-  gem 'byebug', platform: :mri
+  gem 'pry'
 end
 
 group :development do
