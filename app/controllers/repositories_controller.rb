@@ -5,6 +5,10 @@ class RepositoriesController < ApplicationController
     redirect_to repositories_path, notice: result
   end
 
+  def home
+
+  end
+
   def index
     @repositories = Repository.all
   end

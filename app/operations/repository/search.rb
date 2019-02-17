@@ -6,7 +6,7 @@ class Repository::Search
     @languages = ['ruby', 'java', 'python', 'c', 'go']
     @responses = []
     @conn = nil
-    @status = 'Repositorios importados com sucesso!'
+    @status = 'Repositórios importados com sucesso!'
   end
 
   def call

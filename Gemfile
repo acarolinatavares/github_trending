@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'typhoeus'
 gem 'faraday'
 gem 'faraday_middleware'
+gem 'bootstrap', '~> 4.3.1'
+gem 'sprockets-rails'
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'

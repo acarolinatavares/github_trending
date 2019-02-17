@@ -1,0 +1,98 @@
+//colors
+$white: #fff;
+$color_mine_shaft_approx: #333;
+$black_50: rgba(0, 0, 0, .5);
+$white_50: rgba(255, 255, 255, .5);
+$white_25: rgba(255, 255, 255, .25);
+
+//@extend-elements
+//original selectors
+//.btn-secondary, .btn-secondary:hover, .btn-secondary:focus
+%extend_1 {
+  color: $color_mine_shaft_approx;
+  //Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  text-shadow: none;
+  background-color: $white;
+  border: .05rem solid $white;
+}
+
+
+a {
+  color: $white;
+  &:focus {
+    color: $white;
+  }
+  &:hover {
+    color: $white;
+  }
+}
+.btn-secondary {
+  @extend %extend_1;
+  &:hover {
+    @extend %extend_1;
+  }
+  &:focus {
+    @extend %extend_1;
+  }
+}
+html {
+  height: 100%;
+  background-color: $color_mine_shaft_approx;
+}
+body {
+  height: 100%;
+  background-color: $color_mine_shaft_approx;
+  display: flex;
+  color: $white;
+  text-shadow: 0 .05rem .1rem $black_50;
+  box-shadow: inset 0 0 5rem $black_50;
+}
+.cover-container {
+  max-width: 42em;
+}
+.masthead {
+  margin-bottom: 2rem;
+}
+.masthead-brand {
+  margin-bottom: 0;
+}
+.nav-masthead {
+  .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: $white_50;
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+    &:hover {
+      border-bottom-color: $white_25;
+    }
+    &:focus {
+      border-bottom-color: $white_25;
+    }
+    + .nav-link {
+      margin-left: 1rem;
+    }
+  }
+  .active {
+    color: $white;
+    border-bottom-color: $white;
+  }
+}
+@media(min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+.cover {
+  padding: 0 1.5rem;
+  .btn-lg {
+    padding: .75rem 1.25rem;
+    font-weight: 700;
+  }
+}
+.mastfoot {
+  color: $white_50;
+}

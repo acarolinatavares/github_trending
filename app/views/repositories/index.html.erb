@@ -1,22 +1,3 @@
-<h3>Repositorios</h3>
+<div class="content">
 
-<p id="notice"><%= notice %></p>
-
-<%= link_to "Buscar Repositorios", search_repositories_path %>
-<br>
-<table>
-  <thead>
-    <tr>
-      Nome
-    </tr>
-  </thead>
-  <tbody>
-    <% @repositories.each do |r| %>
-      <tr>
-        <td>
-          <%= link_to r.name, repository_path(r) %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
