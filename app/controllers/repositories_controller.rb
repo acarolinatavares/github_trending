@@ -10,7 +10,8 @@ class RepositoriesController < ApplicationController
   end
 
   def show
-    @repository = Repository.find(params[:id])
+    @repository = Repository.find_by(id: params[:id])
+    redirect_to repositories_path, notice: 'Nenhum repositorio encontrado com esse id' unless @repository
   end
 
 end
