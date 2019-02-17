@@ -5,7 +5,7 @@ class CreateOwners < ActiveRecord::Migration[5.0]
       t.string :login
       t.string :avatar_url
       t.string :url
-      t.string :type
+      t.string :owner_type
 
       t.timestamps
     end

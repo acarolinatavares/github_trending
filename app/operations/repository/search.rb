@@ -81,7 +81,7 @@ class Repository::Search
     owner.login = api_owner['login']
     owner.avatar_url = api_owner['avatar_url']
     owner.url = api_owner['url']
-    owner.type = api_owner['type']
+    owner.owner_type = api_owner['type']
     owner.save
     owner
   end
