@@ -1,24 +1,26 @@
-# README
+# GitHub Trending
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto para buscar os reposioritos destaques das linguages Java, Ruby, Go,C e Python
 
-Things you may want to cover:
+Especificaçoes
 
-* Ruby version
+* Ruby 2.4.5
 
-* System dependencies
+* Rails 5.0.3
 
-* Configuration
+* PostgreSQL
 
-* Database creation
+Rodando o projeto
 
-* Database initialization
+* Baixar o projeto e acessar a pasta dele no terminal
+* Rodar bundle install para instalar as gems
+* Rodar rails db:create para criar o banco
+* Rodar rails db:migrate para executar as migraçoes
+* Rodar rails s
+* Acessar http://localhost:3000
 
-* How to run the test suite
+Rodando os testes
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Na pasta do projeto rodar rails:db:migrate RAILS_ENV=test para executar as migraçoes no banco de teste
+* Rodar rails db:test:prepare para preparar o database
+* Rodar rspec spec/ para executar os testes
