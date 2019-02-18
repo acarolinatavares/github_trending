@@ -18,6 +18,7 @@ gem 'faraday'
 gem 'faraday_middleware'
 gem 'bootstrap', '~> 4.3.1'
 gem 'sprockets-rails'
+gem 'kaminari'
 
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'

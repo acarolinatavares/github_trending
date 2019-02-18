@@ -9,14 +9,13 @@
 </head>
 
 <body>
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+  <div class="d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
     <header class="masthead mb-auto">
-      <div class="inner">
+      <div class="inner cover-container">
         <h3 class="masthead-brand">Github Trendings</h3>
         <nav class="nav nav-masthead justify-content-center">
           <%= link_to "Home", home_repositories_path, class: 'nav-link'%>
           <%= link_to "Repositórios", repositories_path, class: 'nav-link' %>
-          <%= link_to "Desenvolvedores", '#', class: 'nav-link' %>
         </nav>
       </div>
     </header>

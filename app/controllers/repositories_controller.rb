@@ -10,7 +10,7 @@ class RepositoriesController < ApplicationController
   end
 
   def index
-    @repositories = Repository.all
+    @repositories = Repository.order(:name).page(params[:page])
   end
 
   def show
