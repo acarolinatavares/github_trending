@@ -34,7 +34,7 @@
 <script>
     $( document ).ready(function() {
         var link =  $('a[href$="'+ location.pathname +'"]')[0];
-        if (!link) {
+        if (!link && location.pathname == '/') {
             link =  $('a[href$="/repositories/home"]')[0];
         }
         $(link).addClass("active");

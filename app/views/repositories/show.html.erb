@@ -1,4 +1,43 @@
-<h2><%= @repository.name %></h2>
-<p>URL: <%= @repository.html_url %></p>
-<p>Estrelas: <%= @repository.stargazers_count %></p>
-<p>Criador: <%= @repository.owner.login %></p>
+<div class="card card_repository">
+  <div class="card-body">
+    <h4 class="card-title"><%= @repository.name %></h4>
+    <p class="card-text"><%= @repository.description %></p>
+    <p>
+      <%= fa_icon "star", text: @repository.stargazers_count %>
+      <%= fa_icon "eye", text: @repository.watchers_count %>
+    </p>
+    <br>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="form-group row">
+          <b style="margin-right: 5px">Nome Completo: </b><p><%=@repository.full_name %></p>
+        </div>
+        <div class="form-group row">
+          <b style="margin-right: 5px">Privado: </b><p><%=@repository.private ? 'Sim' : 'Não' %></p>
+        </div>
+        <div class="form-group row">
+          <b style="margin-right: 5px">Quantidade de Forks: </b><p><%=@repository.forks_count %></p>
+        </div>
+        <div class="form-group row">
+          <b style="margin-right: 5px">Issues Abertas: </b><p><%=@repository.open_issues_count %></p>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group row">
+          <b style="margin-right: 5px">Link Github: </b><p><%= link_to @repository.html_url, @repository.html_url, class: 'card_link' %></p>
+        </div>
+        <div class="form-group row">
+          <b style="margin-right: 5px">URL API Github: </b><p><%= link_to @repository.url, @repository.url, class: 'card_link' %></p>
+        </div>
+        <div class="form-group row">
+          <b style="margin-right: 5px">Homepage: </b><p><%= link_to @repository.homepage, @repository.homepage, class: 'card_link' %></p>
+        </div>
+        <div class="form-group row">
+          <b style="margin-right: 5px">Linguagem: </b><p><%=@repository.language %></p>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
