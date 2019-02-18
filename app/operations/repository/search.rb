@@ -10,9 +10,11 @@ class Repository::Search
   end
 
   def call
-    build_request
-    make_requests
-    create_repositories
+    Rails.cache.fetch("repositories", expires_in: 24.hours) do
+      build_request
+      make_requests
+      create_repositories
+    end
     @status
   end
 
