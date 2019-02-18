@@ -24,3 +24,5 @@ Rodando os testes
 * Na pasta do projeto rodar rails:db:migrate RAILS_ENV=test para executar as migraçoes no banco de teste
 * Rodar rails db:test:prepare para preparar o database
 * Rodar rspec spec/ para executar os testes
+
+Link Heroku: https://github-trendings.herokuapp.com
