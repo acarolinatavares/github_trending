@@ -5,6 +5,7 @@
     <p>
       <%= fa_icon "star", text: @repository.stargazers_count %>
       <%= fa_icon "eye", text: @repository.watchers_count %>
+      <%= fa_icon "user", text: @repository.owner.login %>
     </p>
     <br>
     <div class="row">
